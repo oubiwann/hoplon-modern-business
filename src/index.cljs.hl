@@ -1,6 +1,208 @@
 (page "index.html")
 
-(html
-  (head)
+
+(html :lang "en"
+  (head
+    (meta :charset "utf-8")
+    (meta :name "viewport" :content "width=device-width, initial-scale=1.0")
+    (meta :name "description" :content "")
+    (meta :name "author" :content "")
+    (title "Modern Business - Start Bootstrap Template")
+    ;; Bootstrap core CSS
+    (link :rel "stylesheet" :href "css/bootstrap-slate.css")
+    ;; Add custom CSS here
+    (link :rel "stylesheet" :href "css/modern-business.css")
+    (link :rel "stylesheet" :href "font-awesome/css/font-awesome.min.css"))
   (body
-    (h1 "Hello, World!")))
+
+    ;; navigation menu
+    (nav :class "navbar navbar-fixed-top" :role "navigation"
+      (div :class "container"
+        (div :class "navbar-header"
+          (button :type "button" :class "navbar-toggle"
+                  :data-toggle "collapse" :Data-target ".navbar-ex1-collapse"
+            (span :class "sr-only" "Toggle navigation")
+            (span :class "icon-bar")
+            (span :class "icon-bar")
+            (span :class "icon-bar"))
+          ;; You'll want to use a responsive image option so this logo looks
+          ;; good on devices - I recommend using something like retina.js (do a
+          ;; quick Google search for it and you'll find it
+          (a :class "navbar-brand" :href "index.html" "Modern Business"))
+        ;; Collect the nav links, forms, and other content for toggling
+        (div :class "collapse navbar-collapse navbar-ex1-collapse"
+          (ul :class "nav navbar-nav navbar-right"
+            (li (a :href "about.html" "About"))
+            (li (a :href "services.html" "Services"))
+            (li (a :href "contact.html" "Contact"))
+            (li :class "dropdown"
+              (a :href "#" :class "dropdown-toggle"
+                 :data-toggle "dropdown" "Portfolio" (b :class "caret"))
+              (ul :class "dropdown-menu"
+                (li (a :href "portfolio-1-col.html" "1 Column Portfolio"))
+                (li (a :href "portfolio-2-col.html" "2 Column Portfolio"))
+                (li (a :href "portfolio-3-col.html" "3 Column Portfolio"))
+                (li (a :href "portfolio-4-col.html" "4 Column Portfolio"))
+                (li (a :href "portfolio-item.html" "Single Portfolio Item"))))
+            (li :class "dropdown"
+              (a :href "#" :class "dropdown-toggle"
+                 :data-toggle "dropdown" "Blog" (b :class "caret"))
+              (ul :class "dropdown-menu"
+                (li (a :href "blog-home-1.html" "Blog Home 1"))
+                (li (a :href "blog-home-2.html" "Blog Home 2"))
+                (li (a :href "blog-post.html" "Blog Post"))))
+            (li :class "dropdown"
+              (a :href "#" :class "dropdown-toggle"
+                 :data-toggle "dropdown" "Other Pages" (b :class "caret"))
+              (ul :class "dropdown-menu"
+                (li (a :href "full-width.html" "Full Width Page"))
+                (li (a :href "sidebar.html" "Sidebar Page"))
+                (li (a :href "faq.html" "FAQ"))
+                (li (a :href "404.html" "404"))
+                (li (a :href "pricing.html" "Pricing Page"))))))))
+
+    ;; carousel
+    (div :id "myCarousel" :class "carousel slide"
+      ; indicators
+      (ol :class "carousel-indicators"
+        (li :data-target "#myCarousel" :data-slide-to "0" :class "active")
+        (li :data-target "#myCarousel" :data-slide-to "1")
+        (li :data-target "#myCarousel" :data-slide-to "2"))
+      ; wrapper for slides
+      (div :class "carousel-inner"
+        (div :class "item active"
+          (div :class "fill"
+               :style "background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+          (div :class "carousel-caption"
+            (h1 "Modern Business - A Bootstrap 3 Template")))
+        (div :class "item"
+          (div :class "fill"
+               :style "background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+          (div :class "carousel-caption"
+            (h1 "Ready to Style & Add Content")))
+        (div :class "item"
+          (div :class "fill"
+               :style "background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+          (div :class "carousel-caption"
+            (h1 "Additional Layout Options at"
+              (a :href "http://startbootstrap.com" "http://startbootstrap.com")))))
+      ; controls
+      (a :class "left carousel-control" :href "#myCarousel" :data-slide "prev"
+        (span :class "icon-prev"))
+      (a :class "right carousel-control" :href "#myCarousel" :data-slide "next"
+        (span :class "icon-next")))
+
+    ;; content section 1
+    (div :class "section"
+      (div :class "container"
+        (div :class "row"
+          (div :class "col-lg-4 col-md-4"
+            (h3 (i :class "fa fa-check-circle") " Bootstrap 3 Built")
+            (p "The 'Modern Business' website template by "
+               (a :href "http://startbootstrap.com" "Start Bootstrap")
+               "is built with"
+               (a :href "http://getbootstrap.com" "Bootstrap 3") "."
+               "Make sure you're up to date with latest Bootstrap "
+               "documentation!"))
+          (div :class "col-lg-4 col-md-4"
+            (h3 (i :class "fa fa-pencil") " Ready to Style &amp; Edit")
+            (p "You're ready to go with this pre-built page structure, now all "
+               "you need to do is add your own custom stylings! You can see "
+               "some free themes over at "
+               (a :href "http://bootswatch.com" "Bootswatch") ", or come up "
+               "with your own using "
+               (a :href "http://getbootstrap.com/customize/"
+                        "the Bootstrap customizer") "!"))
+          (div :class "col-lg-4 col-md-4"
+            (h3 (i :class "fa fa-folder-open") " Many Page Options")
+            (p "This template features many common pages that you might see on "
+               "a business website. Pages include: about, contact, portfolio "
+               "variations, blog, pricing, FAQ, 404, services, and general "
+               "multi-purpose pages.")))))
+
+    ;; content section 2
+    (div :class "section text-center"
+      (div :class "container"
+        (div :class "row"
+          (div :class "col-lg-12"
+            (h2 "Modern Business: A Clean & Simple Full Website Template "
+                "by Start Bootstrap")
+            (p "A complete website design featuring various single page "
+               "templates from Start Bootstraps library of free HTML starter "
+               "templates.")
+            (hr)))))
+
+    ;; content section 3
+    (div :class "section"
+      (div :class "container"
+        (div :class "row"
+          (div :class "col-lg-12 text-center"
+            (h2 "Display Some Work on the Home Page Portfolio")
+            (hr))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450")))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450")))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450")))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450")))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450")))
+          (div :class "col-lg-4 col-md-4 col-sm-6"
+            (a :href "portfolio-item.html"
+               (img :class "img-responsive img-home-portfolio"
+                    :src "http://placehold.it/700x450"))))))
+
+    ;; content section 4
+    (div :class "section"
+      (div :class "container"
+        (div :vlass "row"
+          (div :class "col-lg-6 col-md-6 col-sm-6"
+            (h2 "Modern Business Features Include")
+            (ul
+              (li "Bootstrap 3 Framework")
+              (li "Mobile Responsive Design")
+              (li "Predefined File Paths")
+              (li "Minimal Custom CSS Styles")
+              (li "Unstyled: Add Your Own Style and Content!")
+              (li "Font-Awesome fonts come pre-installed!")
+              (li "100% " (strong "Free") " to Use")
+              (li "Open Source: Use for any project, private or commercial!"))))))
+
+    ;; content section 5
+    (div :class "container"
+      (div :class "row well"
+        (div :class "col-lg-8 col-md-8"
+          (h4 "'Modern Business' is a ready-to-use, Bootstrap 3 updated, "
+              "multi-purpose HTML theme!")
+          (p "For more templates and more page options that you can integrate "
+             "into this website template, visit Start Bootstrap!"))
+        (div :class "col-lg-4 col-md-4"
+          (a :class "btn btn-lg btn-primary pull-right"
+             :href "http://startbootstrap.com" "See More Templates!"))))
+
+    ;; footer
+
+    (div :class "container"
+      (hr)
+      (footer
+        (div :class "row"
+          (div :class "col-lg-12"
+            (p "Copyright © Company 2013")))))
+
+    ;; js loading
+    (script :src "js/jquery-1.10.2.js")
+    (script :src "js/bootstrap.js")
+    (script :src "js/modern-business.js")))
+
