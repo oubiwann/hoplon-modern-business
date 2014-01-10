@@ -13,21 +13,28 @@ The StartBootstrap "Modern Business" template ported to Hoplon
 You'll probably want to have two terminals open in your project's
 directory.
 
-1. Start the auto-compiler.
+1. Start the auto-compiler:
 
     ```bash
-    $ boot watch hoplon
+    $ make watch
     ```
 
-2. Open the compiled html file.
+1. Start the dev server:
+
+    ```bash
+    $ make dev
+    ```
+
+1. Open [localhost:9999][3] in your browser to view the rendered html.
 
     ```bash
     $ cd resources/public
     $ open index.html
     ```
 
-3. There is no step 3; you're done.
+4. Hack on your ``src/*.cljs.hl`` files!
 
 
 [1]: https://github.com/tailrecursion/boot
 [2]: https://github.com/technomancy/leiningen
+[3]: http://localhost:9999/
