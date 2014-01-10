@@ -1,0 +1,7 @@
+(ns infra.post)
+
+
+(defelem load-scripts []
+  (script :src "js/jquery-1.10.2.js")
+  (script :src "js/bootstrap.js")
+  (script :src "js/modern-business.js"))

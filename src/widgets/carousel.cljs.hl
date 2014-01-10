@@ -1,0 +1,33 @@
+(ns widgets.carousel)
+
+
+(defelem hero []
+  (div :id "myCarousel" :class "carousel slide"
+    ; indicators
+    (ol :class "carousel-indicators"
+      (li :data-target "#myCarousel" :data-slide-to "0" :class "active")
+      (li :data-target "#myCarousel" :data-slide-to "1")
+      (li :data-target "#myCarousel" :data-slide-to "2"))
+    ; wrapper for slides
+    (div :class "carousel-inner"
+      (div :class "item active"
+        (div :class "fill"
+             :style "background-image:url('http://placehold.it/1900x1080&text=Slide One');")
+        (div :class "carousel-caption"
+          (h1 "Modern Dark Business - A Bootstrap 3 Template")))
+      (div :class "item"
+        (div :class "fill"
+             :style "background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
+        (div :class "carousel-caption"
+          (h1 "Ready to Style & Add Content")))
+      (div :class "item"
+        (div :class "fill"
+             :style "background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
+        (div :class "carousel-caption"
+          (h1 "Additional Layout Options at "
+            (a :href "http://startbootstrap.com" "http://startbootstrap.com")))))
+    ; controls
+    (a :class "left carousel-control" :href "#myCarousel" :data-slide "prev"
+      (span :class "icon-prev"))
+    (a :class "right carousel-control" :href "#myCarousel" :data-slide "next"
+      (span :class "icon-next"))))

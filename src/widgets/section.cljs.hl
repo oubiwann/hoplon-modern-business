@@ -1,0 +1,20 @@
+(ns widgets.section)
+
+
+(defelem row [& kids]
+  (div :class "section"
+    (div :class "container"
+      (div :class "row"
+        kids))))
+
+(defelem centered-well [& kids]
+  (div :class "section text-center"
+    (div :class "container"
+      (div :class "row well"
+        (div :class "col-lg-12"
+          kids)))))
+
+(defelem container-well [& kids]
+  (div :class "container"
+    (div :class "row well"
+      kids)))
