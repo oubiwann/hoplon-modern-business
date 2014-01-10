@@ -2,7 +2,7 @@
 
 The StartBootstrap "Modern Business" template ported to [Hoplon][4]
 
-![screenshot](https://raw2.github.com/oubiwann/hoplon-modern-business/master/resources/screenshots/main-page-small.png)
+[![screenshot](https://raw2.github.com/oubiwann/hoplon-modern-business/master/resources/screenshots/main-page-small.png)](https://raw2.github.com/oubiwann/hoplon-modern-business/master/resources/screenshots/main-page.png)
 
 ## Dependencies
 
