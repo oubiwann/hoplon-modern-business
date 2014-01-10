@@ -27,11 +27,6 @@ directory.
 
 1. Open [localhost:9999][3] in your browser to view the rendered html.
 
-    ```bash
-    $ cd resources/public
-    $ open index.html
-    ```
-
 4. Hack on your ``src/*.cljs.hl`` files!
 
 
