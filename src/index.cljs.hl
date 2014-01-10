@@ -105,7 +105,7 @@
                "Make sure you're up to date with latest Bootstrap "
                "documentation!"))
           (div :class "col-lg-4 col-md-4"
-            (h3 (i :class "fa fa-pencil") " Ready to Style &amp; Edit")
+            (h3 (i :class "fa fa-pencil") " Ready to Style & Edit")
             (p "You're ready to go with this pre-built page structure, now all "
                "you need to do is add your own custom stylings! You can see "
                "some free themes over at "
