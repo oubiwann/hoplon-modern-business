@@ -28,9 +28,6 @@ directory.
 
 3. There is no step 3; you're done.
 
-## License
-
-Copyright © 2014, **Your Name Goes Here**
 
 [1]: https://github.com/tailrecursion/boot
 [2]: https://github.com/technomancy/leiningen
