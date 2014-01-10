@@ -1,6 +1,6 @@
 # hoplon-modern-business
 
-The StartBootstrap "Modern Business" template ported to Hoplon
+The StartBootstrap "Modern Business" template ported to [Hoplon][4]
 
 ## Dependencies
 
@@ -33,3 +33,4 @@ directory.
 [1]: https://github.com/tailrecursion/boot
 [2]: https://github.com/technomancy/leiningen
 [3]: http://localhost:9999/
+[4]: http://hoplon.io/
