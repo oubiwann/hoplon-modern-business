@@ -84,7 +84,7 @@
           (div :class "fill"
                :style "background-image:url('http://placehold.it/1900x1080&text=Slide Three');")
           (div :class "carousel-caption"
-            (h1 "Additional Layout Options at"
+            (h1 "Additional Layout Options at "
               (a :href "http://startbootstrap.com" "http://startbootstrap.com")))))
       ; controls
       (a :class "left carousel-control" :href "#myCarousel" :data-slide "prev"
