@@ -74,7 +74,7 @@
           (div :class "fill"
                :style "background-image:url('http://placehold.it/1900x1080&text=Slide One');")
           (div :class "carousel-caption"
-            (h1 "Modern Business - A Bootstrap 3 Template")))
+            (h1 "Modern Dark Business - A Bootstrap 3 Template")))
         (div :class "item"
           (div :class "fill"
                :style "background-image:url('http://placehold.it/1900x1080&text=Slide Two');")
@@ -98,7 +98,7 @@
         (div :class "row"
           (div :class "col-lg-4 col-md-4"
             (h3 (i :class "fa fa-check-circle") " Bootstrap 3 Built")
-            (p "The 'Modern Business' website template by "
+            (p "The 'Modern Dark Business' website template by "
                (a :href "http://startbootstrap.com" "Start Bootstrap")
                "is built with"
                (a :href "http://getbootstrap.com" "Bootstrap 3") "."
@@ -123,9 +123,9 @@
     ;; content section 2
     (div :class "section text-center"
       (div :class "container"
-        (div :class "row"
+        (div :class "row well"
           (div :class "col-lg-12"
-            (h2 "Modern Business: A Clean & Simple Full Website Template "
+            (h2 "Modern Dark Business: A Clean & Simple Full Website Template "
                 "by Start Bootstrap")
             (p "A complete website design featuring various single page "
                "templates from Start Bootstraps library of free HTML starter "
@@ -169,7 +169,7 @@
       (div :class "container"
         (div :vlass "row"
           (div :class "col-lg-6 col-md-6 col-sm-6"
-            (h2 "Modern Business Features Include")
+            (h2 "Modern Dark Business Features Include")
             (ul
               (li "Bootstrap 3 Framework")
               (li "Mobile Responsive Design")
@@ -184,7 +184,7 @@
     (div :class "container"
       (div :class "row well"
         (div :class "col-lg-8 col-md-8"
-          (h4 "'Modern Business' is a ready-to-use, Bootstrap 3 updated, "
+          (h4 "'Modern Dark Business' is a ready-to-use, Bootstrap 3 updated, "
               "multi-purpose HTML theme!")
           (p "For more templates and more page options that you can integrate "
              "into this website template, visit Start Bootstrap!"))
