@@ -1,0 +1,38 @@
+(page "index.html"
+  (:require [infra.post :as post]
+            [infra.pre :as pre]
+            [content.main :as main]
+            [widgets.carousel :as carousel]
+            [widgets.footer :as footer]
+            [widgets.nav :as nav]))
+
+
+(html :lang "en"
+  (head
+    (meta :charset "utf-8")
+    (meta :name "viewport" :content "width=device-width, initial-scale=1.0")
+    (meta :name "description" :content "")
+    (meta :name "author" :content "")
+    (title "Modern Dark Business - Start Bootstrap Template")
+    ;; Bootstrap core CSS
+    (link :rel "stylesheet" :href "css/bootstrap-slate.css")
+    ;; Add custom CSS here
+    (link :rel "stylesheet" :href "css/modern-business.css")
+    (link :rel "stylesheet" :href "font-awesome/css/font-awesome.min.css"))
+
+  (body
+    ;; navigation menu
+    (nav/main-menu)
+    ;; carousel
+    (carousel/hero)
+    ;; main content
+    (main/get-section-1)
+    (main/get-section-2)
+    (main/get-section-3)
+    (main/get-section-4)
+    (main/get-section-5)
+    ;; footer
+    (footer/main "Copyright © Your Dark Company, 2014")
+    ;; js loading
+    (post/load-scripts)))
+
