@@ -3,7 +3,8 @@
             [compojure.route :as route]
             [compojure.core :refer [defroutes]]
             [compojure.handler :refer [site]]
-            [org.httpkit.server :as httpd]))
+            [org.httpkit.server :as httpd]
+            [tailrecursion.boot.core :refer [deftask]]))
 
 
 (defn- log [msg & vals]
@@ -25,6 +26,27 @@
   (route/files "/" {:root "resources/public/"})
   (route/not-found "404"))
 
-(defn run []
+(defn run [port]
   (httpd/run-server
-    (site (-> server-routes logging)) {:port 9999}))
+    (site (-> server-routes logging)) {:port port}))
+
+(defn stop [pid]
+  nil)
+
+(defn taillog [logfile]
+  nil)
+
+(deftask devserver
+  "[NOT READY] start|stop|taillog dev server for Hoplon files."
+  [boot & [[command] {:keys [port pid] :or {:port 9999}}]]
+  (fn [continue]
+    (fn [event]
+      (case command
+        "start" (fn []
+                  (run port)
+                  ; XXX set the pid for for the spawned process in the boot env
+                  ; XXX set the log file location
+                  )
+        "stop" (stop "pid"))
+        "taillog" (taillog "log file)")
+      (continue event))))
