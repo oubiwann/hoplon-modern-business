@@ -1,8 +1,11 @@
 (ns io.cogitat.boot
-  (:require [boot.core :refer [deftask]]))
+  (:require [tailrecursion.boot.core :refer [deftask]]))
 
 
-(deftask foo [boot]
+(deftask foo
+  "A simple task to show the basic form; simply prints a message."
+  [boot]
+  (print 
   (fn [continue]
     (fn [event]
       (println "Hello, boot!")
