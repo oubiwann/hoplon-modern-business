@@ -8,4 +8,4 @@
                   [tailrecursion.hoplon.boot :refer :all]}
  :public "resources/public"
  :src-static #{"resources/assets"}
- :src-paths #{"src"}}
+ :src-paths #{"src/cljs"}}
