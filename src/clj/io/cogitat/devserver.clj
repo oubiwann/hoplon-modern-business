@@ -1,4 +1,4 @@
-(ns devserver
+(ns io.cogitat.devserver
   (:require [clojure.string :as string]
             [compojure.route :as route]
             [compojure.core :refer [defroutes]]
