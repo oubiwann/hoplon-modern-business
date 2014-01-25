@@ -26,9 +26,12 @@
   (route/files "/" {:root "resources/public/"})
   (route/not-found "404"))
 
-(defn run [port]
-  (httpd/run-server
-    (site (-> server-routes logging)) {:port port}))
+(defn run
+  ([]
+    (run 9999))
+  ([port]
+    (httpd/run-server
+      (site (-> server-routes logging)) {:port port})))
 
 (defn stop [pid]
   nil)
@@ -38,15 +41,16 @@
 
 (deftask devserver
   "[NOT READY] start|stop|taillog dev server for Hoplon files."
-  [boot & [[command] {:keys [port pid] :or {:port 9999}}]]
+  [boot command & {:keys [port pid] :or {:port 9999}}]
   (fn [continue]
     (fn [event]
       (case command
         "start" (fn []
-                  (run port)
+                  (run :port port)
                   ; XXX set the pid for for the spawned process in the boot env
                   ; XXX set the log file location
                   )
-        "stop" (stop "pid"))
-        "taillog" (taillog "log file)")
+        "stop" (stop "pid")
+        "taillog" (taillog "log file")
+        "default")
       (continue event))))
