@@ -1,4 +1,4 @@
-(ns io.cogitat.boot
+(ns io.cogitat.bootdemo
   (:require [tailrecursion.boot.core :refer [deftask]]))
 
 
