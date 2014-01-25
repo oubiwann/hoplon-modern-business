@@ -3,3 +3,6 @@ watch:
 
 dev:
 	@lein run
+
+clean:
+	rm -rf target/classes target/*.jar target/stale
