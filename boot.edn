@@ -9,4 +9,4 @@
                   [io.cogitat.boot :refer :all]}
  :public "resources/public"
  :src-static #{"resources/assets"}
- :src-paths #{"src/cljs"}}
+ :src-paths #{"src/cljs" "src/clj"}}
