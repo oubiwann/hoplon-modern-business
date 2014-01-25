@@ -3,10 +3,14 @@
  :dependencies [[tailrecursion/boot.core "1.2.3"]
                 [tailrecursion/boot.task "1.0.2"]
                 [tailrecursion/hoplon "4.0.10"]
-                [org.clojure/clojurescript "0.0-2138"]]
+                [org.clojure/clojurescript "0.0-2138"]
+                [http-kit "2.1.16"]
+                [ring "1.2.1"]
+                [compojure "1.1.6"]]
  :require-tasks #{[tailrecursion.boot.task :refer :all]
                   [tailrecursion.hoplon.boot :refer :all]
-                  [io.cogitat.boot :refer :all]}
+                  [io.cogitat.boot :refer :all]
+                  [io.cogitat.devserver :refer :all]}
  :public "resources/public"
  :src-static #{"resources/assets"}
  :src-paths #{"src/cljs" "src/clj"}}
