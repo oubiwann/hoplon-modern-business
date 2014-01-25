@@ -8,7 +8,7 @@
                  [ring "1.2.1"]
                  [compojure "1.1.6"]
                  [org.clojure/clojurescript "0.0-2138"]
-                 [tailrecursion/boot.task "1.0.2"]]
+                 [tailrecursion/boot.core "1.2.3"]]
   :source-paths ["src/clj"]
   :jvm-opts ^:replace ["-Xmx512m" "-server"]
   :aot [io.cogitat.devserver]
