@@ -9,12 +9,12 @@
 
 (html :lang "en"
   (head
-    (html-meta :charset "utf-8")
-    (html-meta :name "viewport"
+    (meta :charset "utf-8")
+    (meta :name "viewport"
                :content "width=device-width, initial-scale=1.0")
-    (html-meta :name "description" :content "")
-    (html-meta :name "keywords" :content "")
-    (html-meta :name "author" :content "")
+    (meta :name "description" :content "")
+    (meta :name "keywords" :content "")
+    (meta :name "author" :content "")
     (title "Modern Dark Business - Start Bootstrap Template")
     ;; Bootstrap core CSS
     (link :rel "stylesheet" :href "css/bootstrap-slate.css")
@@ -36,5 +36,7 @@
     ;; footer
     (footer/main "Copyright © Your Dark Company, 2014")
     ;; js loading
-    (post/load-scripts)))
+    (script :src "js/jquery-1.10.2.js")
+    (script :src "js/bootstrap.js")
+    (script :src "js/modern-business.js")))
 
