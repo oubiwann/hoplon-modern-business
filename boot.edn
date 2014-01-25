@@ -9,6 +9,7 @@
                 [compojure "1.1.6"]]
  :require-tasks #{[tailrecursion.boot.task :refer :all]
                   [tailrecursion.hoplon.boot :refer :all]
+                  [io.cogitat.bootdemo :refer :all]
                   [io.cogitat.boot :refer :all]
                   [io.cogitat.devserver :refer :all]}
  :public "resources/public"
