@@ -9,7 +9,7 @@
    * compiles boilerplate .hlx files to .hl files (in a temp dir)
    * adds the temp dir to the boot env's src-paths so that they will get
      compiled
-   * 
+   * TBD
 
   Called as:
       $ boot watch process-hlx hoplon
