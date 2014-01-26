@@ -18,3 +18,22 @@
   (div :class "container"
     (div :class "row well"
       kids)))
+
+(defelem container-full [& kids]
+  (div :class "container"
+    (div :class "row"
+      (div :class "col-lg-12"
+        kids))))
+
+(defelem container-full-with-back [& kids]
+  (div :class "container"
+    (div :class "row well"
+      (div :class "col-lg-12"
+        kids))))
+
+(defelem container-sidebar
+  [{:keys [title subtitle] :as attrs} kids]
+  (div :class "col-md-9 col-sm-8"
+    (h1 :class "page-header" (str title " ")
+      (small subtitle))
+    kids))
