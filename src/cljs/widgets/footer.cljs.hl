@@ -1,7 +1,7 @@
 (ns widgets.footer)
 
 
-(defelem main [& content]
+(defn main [& content]
   (div :class "container"
     (hr)
     (footer
