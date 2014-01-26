@@ -1,7 +1,7 @@
 (ns widgets.nav)
 
 
-(defelem main-menu []
+(defn main-menu []
   (nav :class "navbar navbar-fixed-top" :role "navigation"
     (div :class "container"
       (div :class "navbar-header"
@@ -42,7 +42,62 @@
                :data-toggle "dropdown" "Other Pages" (b :class "caret"))
             (ul :class "dropdown-menu"
               (li (a :href "full-width.html" "Full Width Page"))
+              (li (a :href "full-width-back.html" "Full Width Page w/back"))
               (li (a :href "sidebar.html" "Sidebar Page"))
+              (li (a :href "sidebar-back.html" "Sidebar Page w/back"))
               (li (a :href "faq.html" "FAQ"))
               (li (a :href "404.html" "404"))
               (li (a :href "pricing.html" "Pricing Page")))))))))
+
+(defn sidebar-menu []
+  (div :class "col-md-3 col-sm-4 sidebar"
+    (ul :class "nav nav-stacked nav-pills"
+      (li (a :href "index.html" "Home"))
+      (li (a :href "about.html" "About"))
+      (li (a :href "services.html" "Services"))
+      (li (a :href "contact.html" "Contact"))
+      (li :class "disabled" (a :href "#" "Portfolio"))
+      (li (a :href "portfolio-1-col.html" "1 Column Portfolio"))
+      (li (a :href "portfolio-2-col.html" "2 Column Portfolio"))
+      (li (a :href "portfolio-3-col.html" "3 Column Portfolio"))
+      (li (a :href "portfolio-4-col.html" "4 Column Portfolio"))
+      (li (a :href "portfolio-item.html" "Single Portfolio Item"))
+      (li :class "disabled" (a :href "#" "Blog"))
+      (li (a :href "blog-home-1.html" "Blog Home 1"))
+      (li (a :href "blog-home-2.html" "Blog Home 2"))
+      (li (a :href "blog-post.html" "Blog Post"))
+      (li :class "disabled" (a :href "#" "Other Pages"))
+      (li (a :href "full-width.html" "Full Width Page"))
+      (li (a :href "full-width-back.html" "Full Width Page w/back"))
+      (li :class "active" (a :href "sidebar.html" "Sidebar Page"))
+      (li (a :href "sidebar-back.html" "Sidebar Page w/back"))
+      (li (a :href "faq.html" "FAQ"))
+      (li (a :href "404.html" "404"))
+      (li (a :href "pricing.html" "Pricing Table")))))
+
+
+(defn sidebar-back-menu []
+  (div :class "col-md-3 col-sm-4 sidebar"
+    (ul :class "nav nav-stacked nav-pills"
+      (li (a :href "index.html" "Home"))
+      (li (a :href "about.html" "About"))
+      (li (a :href "services.html" "Services"))
+      (li (a :href "contact.html" "Contact"))
+      (li :class "disabled" (a :href "#" "Portfolio"))
+      (li (a :href "portfolio-1-col.html" "1 Column Portfolio"))
+      (li (a :href "portfolio-2-col.html" "2 Column Portfolio"))
+      (li (a :href "portfolio-3-col.html" "3 Column Portfolio"))
+      (li (a :href "portfolio-4-col.html" "4 Column Portfolio"))
+      (li (a :href "portfolio-item.html" "Single Portfolio Item"))
+      (li :class "disabled" (a :href "#" "Blog"))
+      (li (a :href "blog-home-1.html" "Blog Home 1"))
+      (li (a :href "blog-home-2.html" "Blog Home 2"))
+      (li (a :href "blog-post.html" "Blog Post"))
+      (li :class "disabled" (a :href "#" "Other Pages"))
+      (li (a :href "full-width.html" "Full Width Page"))
+      (li (a :href "full-width-back.html" "Full Width Page w/back"))
+      (li (a :href "sidebar.html" "Sidebar Page"))
+      (li :class "active" (a :href "sidebar-back.html" "Sidebar Page w/back"))
+      (li (a :href "faq.html" "FAQ"))
+      (li (a :href "404.html" "404"))
+      (li (a :href "pricing.html" "Pricing Table")))))
