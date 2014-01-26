@@ -1,7 +1,5 @@
 (page "index.html"
-  (:require [infra.post :as post]
-            [infra.pre :as pre]
-            [content.main :as main]
+  (:require [content.main :as content]
             [widgets.carousel :as carousel]
             [widgets.footer :as footer]
             [widgets.nav :as nav]))
@@ -11,7 +9,7 @@
   (head
     (meta :charset "utf-8")
     (meta :name "viewport"
-               :content "width=device-width, initial-scale=1.0")
+          :content "width=device-width, initial-scale=1.0")
     (meta :name "description" :content "")
     (meta :name "keywords" :content "")
     (meta :name "author" :content "")
@@ -20,7 +18,11 @@
     (link :rel "stylesheet" :href "css/bootstrap-slate.css")
     ;; Add custom CSS here
     (link :rel "stylesheet" :href "css/modern-business.css")
-    (link :rel "stylesheet" :href "font-awesome/css/font-awesome.min.css"))
+    (link :rel "stylesheet" :href "font-awesome/css/font-awesome.min.css")
+    ;; js loading
+    (script :src "js/jquery-1.11.0.min.js")
+    (script :src "js/bootstrap.js")
+    (script :src "js/modern-business.js"))
 
   (body
     ;; navigation menu
@@ -28,15 +30,10 @@
     ;; carousel
     (carousel/hero)
     ;; main content
-    (main/get-section-1)
-    (main/get-section-2)
-    (main/get-section-3)
-    (main/get-section-4)
-    (main/get-section-5)
+    (content/get-section-1)
+    (content/get-section-2)
+    (content/get-section-3)
+    (content/get-section-4)
+    (content/get-section-5)
     ;; footer
-    (footer/main "Copyright © Your Dark Company, 2014")
-    ;; js loading
-    (script :src "js/jquery-1.10.2.js")
-    (script :src "js/bootstrap.js")
-    (script :src "js/modern-business.js")))
-
+    (footer/main "Copyright © Your Dark Company, 2014")))
